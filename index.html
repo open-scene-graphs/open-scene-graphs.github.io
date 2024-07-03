@@ -75,6 +75,18 @@
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
+
+                        <!-- ArXiv abstract Link -->
+                        <span class="link-block">
+                          <a href="http://arxiv.org/abs/2407.02473" target="_blank"
+                          class="external-link button is-normal is-rounded is-dark">
+                          <span class="icon">
+                            <i class="ai ai-arxiv"></i>
+                          </span>
+                          <span>arXiv</span>
+                        </a>
+                      </span>
+
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
                         <a href="https://openreview.net/forum?id=qGkMxAx588" target="_blank"
@@ -85,17 +97,6 @@
                         <span>Workshop</span>
                       </a>
                     </span>
-
-                    <!-- ArXiv abstract Link -->
-                    <span class="link-block">
-                      <a href="http://open-scene-graphs.github.io" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="ai ai-arxiv"></i>
-                      </span>
-                      <span>arXiv (Coming!)</span>
-                    </a>
-                  </span>
 
                     <!-- Supplementary PDF link -->
                     <!-- <span class="link-block">
@@ -162,27 +163,20 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Can we build a system to perform object-goal
-navigation (ObjectNav) and other complex semantic navigation
-tasks in the open world? Composing LLMs that are strong
-semantic reasoners with robotics foundation models that gen-
-eralise across environments and embodiments seems a viable
-avenue. While selecting the right representations to connect them
-effectively is crucial, existing works often prompt LLMs with
-scene representations that are uninformative, unstructured and
-constructed with methods that generalise poorly. To address this
-gap, we propose the Open Scene Graph (OSG), a rich, structured
-topo-semantic representation, along with an OSG mapper module
-composed fully from foundation models. We demonstrate that
-OSGs facilitate reasoning with LLMs, enabling a greedy LLM
-planner to outperform existing LLM approaches by a wide mar-
-gin on ObjectNav benchmarks in diverse indoor environments.
-We take a step towards an open-world ObjectNav system by
-building the fully foundation model-based Explorer system from
-an LLM planner and a generalisable visuomotor policy, with
-OSGs built online by our mapper to connect them. We show
-that Explorer is capable of effective object-goal navigation in the
-real world across different robots and novel instructions
+            How can we build robots for open-world semantic navigation tasks, like
+            searching for target objects in novel scenes? While foundation models have the
+            rich knowledge and generalisation needed for these tasks, a suitable scene 
+            representation is needed to connect them into a complete robot system. We address this
+            with Open Scene Graphs (OSGs), a topo-semantic representation that retains and
+            organises open-set scene information for these models, and has a structure that can
+            be configured for different environment types. We integrate foundation models
+            and OSGs into the OpenSearch system for Open World Object-Goal Navigation,
+            which is capable of searching for open-set objects specified in natural language,
+            while generalising zero-shot across diverse environments and embodiments. Our
+            OSGs enhance reasoning with Large Language Models (LLM), enabling robust
+            object-goal navigation outperforming existing LLM approaches. Through simulation 
+            and real-world experiments, we validate OpenSearch's generalisation across
+            varied environments, robots and novel instructions.
           </p>
         </div>
       </div>
