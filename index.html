@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Open Scene Graphs for Open-World Object-Goal Navigation</title>
+  <title>Open Scene Graphs for <br>Open-World Object-Goal Navigation</title>
   <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -70,7 +70,7 @@
                   </div>
                   <div class="is-size-5 publication-authors">
                     <span class="author-block">
-                      <i>In</i> IJRR Special Issue: Foundation Models and Neurosymbolic AI for Robotics
+                      In IJRR Special Issue: Foundation Models and Neurosymbolic AI for Robotics
                     </span>
                   </div>
                   <div class="is-size-5 publication-authors">
@@ -147,13 +147,13 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- <video poster="" id="tree" autoplay controls muted loop height="100%">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
         <source src="static/videos/banner_video.mp4"
         type="video/mp4">
-      </video> -->
-      <img src="static/images/nav_splash-revision_v2.png" alt="Overview of Explorer using Open Scene Graphs" class="center"/>
+      </video>
+<!--       <img src="static/images/nav_splash-revision_v2.png" alt="Overview of Explorer using Open Scene Graphs" class="center"/> -->
       <h2 class="subtitle has-text-centered">
-        Our Explorer system is capable of searching for a specified object class, given open-set instructions, across diverse embodiments and environments. This is enabled by our Open Scene Graph, which acts as a scene memory for a fully Foundation Model-based (FM) system, that is itself purely built from FMs.
+        <i>OSG Navigator</i> searches in the <i>open world</i> for <i>open-set objects</i>. It composes foundation models with our novel <i>Open Scene Graph</i> to handle diverse object goals, environments and embodiments. 
       </h2>
     </div>
   </div>
@@ -168,20 +168,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            How can we build robots for open-world semantic navigation tasks, like
-            searching for target objects in novel scenes? While foundation models have the
-            rich knowledge and generalisation needed for these tasks, a suitable scene 
-            representation is needed to connect them into a complete robot system. We address this
-            with Open Scene Graphs (OSGs), a topo-semantic representation that retains and
-            organises open-set scene information for these models, and has a structure that can
-            be configured for different environment types. We integrate foundation models
-            and OSGs into the OpenSearch system for Open World Object-Goal Navigation,
-            which is capable of searching for open-set objects specified in natural language,
-            while generalising zero-shot across diverse environments and embodiments. Our
-            OSGs enhance reasoning with Large Language Models (LLM), enabling robust
-            object-goal navigation outperforming existing LLM approaches. Through simulation 
-            and real-world experiments, we validate OpenSearch's generalisation across
-            varied environments, robots and novel instructions.
+            How can we build general-purpose robot systems for open-world semantic navigation, e.g., searching a novel environment for a target object specified in natural language? To tackle this challenge, we introduce OSG Navigator, a modular system composed of foundation models, for open-world Object-Goal Navigation (ObjectNav). Foundation models provide enormous semantic knowledge about the world, but struggle to organise and maintain spatial information effectively at scale. Key to OSG Navigator is the Open Scene Graph representation, which acts as spatial memory for OSG Navigator. It organises spatial information hierarchically using OSG schemas, which are templates, each describing the common structure of a class of environments. OSG schemas can be automatically generated from simple semantic labels of a given environment, e.g., "home" or "supermarket". They enable OSG Navigator to adapt zero-shot to new environment types. We conducted experiments using both Fetch and Spot robots in simulation and in the real world, showing that OSG Navigator achieves state-of-the-art performance on ObjectNav benchmarks and generalises zero-shot over diverse goals, environments, and robot embodiments.
           </p>
         </div>
       </div>
@@ -190,23 +177,42 @@
 </section>
 <!-- End paper abstract -->
 
-<!-- Teaser video-->
+<!-- OSG -->
 <section class="section hero">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <h2 class="title">Video</h2>
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
+      <h2 class="title is-3">Open Scene Graphs</h2>
+<!--       <video poster="" id="tree" autoplay controls muted loop height="100%">
         <source src="static/videos/banner_video.mp4"
         type="video/mp4">
-      </video>
-      <!--<h2 class="subtitle has-text-centered">
-        Our Explorer system is capable of searching for a specified object class, given open-set instructions, across diverse embodiments and environments. This is enabled by our Open Scene Graph, which acts as a scene memory for a fully Foundation Model-based (FM) system, that is itself purely built from FMs.
-      </h2>-->
+      </video> -->
+      <img src="static/images/fig3.jpg" alt="Open Scene Graphs" class="center"/>      
+      <h2 class="subtitle has-text-centered">
+        The <i>Open Scene Graph</i> (OSG) is a hierarchical representation of open-set objects and spatial regions. 
+        To represent <i>open-set spatial regions</i> across diverse environments, OSGs can be configured with OSG schemas.
+        Schemas are templates that capture the common structure across scenes belonging to a particular environment type.
+        They enable OSG Navigator to adapt zero-shot to new environment types, and may either be defined manually using domain knowledge or generated automatically with LLMs.
+      </h2>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+<!-- End OSG -->
+  
+<!-- OSG Navigator -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3">OSG Navigator</h2>
+      <img src="static/images/fig2.jpg" alt="Open Scene Graphs" class="center"/>      
+      <h2 class="subtitle has-text-centered">
+        <i>OSG Navigator</i> is a system architecture composed from foundation models: Large Language Models (LLMs) for reasoning, Visual Foundation Models (VFMs) for perception and General Navigation Models (GNMs) for locomotion.
+        Foundation models enable a system that generalises zero-shot across diverse object goals, environments and embodiments.
+        Such models are insufficient on their own, due to their limited capacity to organise and maintain spatial information.
+        <i>Open Scene Graphs</i> provide a coherent spatial representation of the scene, and serve as a unified scene memory for foundation models.
+      </h2>
+    </div>
+  </div>
+</section>
 
 <!-- Video carousel -->
 <!-- <section class="hero is-small">
@@ -242,10 +248,11 @@
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title">Poster</h2>
+      <h2 class="title is-3">Poster</h2>
 
-      <iframe  src="static/pdfs/VLMNM-poster-v3.pdf" width="70%" height="550">
-          </iframe>
+      <div style="text-align: center;">
+        <iframe  src="static/pdfs/VLMNM-poster-v3.pdf" width="70%" height="550"></iframe>
+      </div>
         
       </div>
     </div>
